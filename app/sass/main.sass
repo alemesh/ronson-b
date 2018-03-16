@@ -1,0 +1,366 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	//position: relative
+	line-height: 1.65
+	font-family: $default-font
+	direction: rtl
+	//overflow-x: hidden
+
+	img
+		max-width: 100%
+
+.wrapper
+	position: relative
+	width: 100%
+	overflow: hidden
+
+.visual-section
+	background-position: 50% 50%
+	background-size: cover
+	min-height: 740px
+	overflow: hidden
+	direction: rtl
+	text-align: center
+	padding: 70px 0 0
+	position: relative
+
+	.img-hold-right
+		position: absolute
+		top: 0
+		right: 0
+
+	.img-hold-left
+		top: 0
+		left: 0
+		position: absolute
+
+		.img-maska-header
+			position: absolute
+			left: -1px
+			top: 0
+
+
+	.logo
+		position: absolute
+		right: 20px
+		top: 115px
+
+		.visual-content
+				font-size: 18px
+				padding-top: 15px
+
+				.below-logo
+					margin-bottom: 20px
+
+		.right-link-red:hover
+			text-decoration: none
+
+		.right-link-red
+			font-size: 40px
+
+			p
+				font-family: "Heebo-Bold", Helvetica
+				color: #e42a37
+				line-height: 0.8
+
+	.visual-content
+		font-size: 53px
+		padding: 0 15px
+
+		h1
+			font-family: "Heebo-Bold", sans-serif
+			font-size: 80px
+			margin: 0
+			line-height: 1.2
+			color: #000000
+
+		p
+			font-family: "Heebo-Regular", sans-serif
+			//text-align: center
+			margin-top: 0px
+			margin-bottom: 0px
+			line-height: 1.2
+			//display: inline-block
+			position: relative
+			color: #000000
+		//z-index: 27
+		.btn-visual
+			//direction: rtl
+			background-color: #e42a37
+			font-family: "Heebo-Bold", Helvetica
+			max-width: 535px
+			//height: 58px
+			padding: 10px
+			border: none
+			font-size: 31px
+			line-height: 1.2
+			color: #eeeeee
+			text-decoration: none
+			transition: all .5s ease
+			&:hover
+				transform: scale(.8)
+				background-color: #fe7b84
+				text-decoration: none
+				color: #111
+
+
+
+	.form-hold
+		bottom: 0
+		left: 0
+		width: 100%
+		//display: block
+		background: black
+		position: absolute
+		padding: 15px
+
+		h3
+			color: #fff
+			text-align: center
+			font-family: "Heebo-Bold", Helvetica
+			font-size: 24px
+			line-height: 1.1
+			margin: 0 0 12px
+
+		.form
+			max-width: 1140px
+			margin: 0 auto
+
+		.form-row-wrap
+			display: flex
+			flex-wrap: wrap
+			margin: 0 -8px
+
+		.form-row
+			width: 25%
+			padding: 0 8px
+
+		.form-control
+			padding: 10px
+			direction: rtl
+			display: block
+			width: 100%
+			height: 60px
+			color: #b5b5b5
+			border: none
+			font-size: 23px
+			//font-family: "SimplerPro_V3"
+			line-height: 1.2
+			text-decoration: none
+			transition: all .5s ease
+			&:hover
+				background-color: #dad8d2
+				//border-top: 2px solid red
+				text-decoration: none
+				color: #111
+
+		.btn
+			background: #e42a37
+			color: white
+			text-align: center
+			height: 60px
+			border: none
+			outline: none
+			display: block
+			width: 100%
+			font-size: 23px
+			text-decoration: none
+			transition: all .5s ease
+			&:hover
+				background-color: #fe7b84
+				text-decoration: none
+				color: #111
+
+.main-wrap
+	text-align: center
+	background-image:  url(../img/6.png), url(../img/Rectangle-5.png)
+	background-position: left bottom
+	background-repeat: no-repeat
+	padding: 65px 0 0
+
+	p
+		margin: 0 0 30px
+	.regular-font
+		font-family: "Heebo-Regular"
+		color: #636363
+	.medium-font
+		font-family: "Heebo-Medium"
+		color: #636363
+
+	.intro-section
+		padding: 0 25px
+		font-size: 25px
+		color: #636363
+		line-height: 1.1
+		margin-bottom: 50px
+
+.boxes-section
+	font-size: 20px
+	font-weight: bold
+	line-height: 1.1
+	padding: 0 15px
+	margin: 0 auto 50px
+	max-width: 1310px
+
+
+	ul
+		padding: 0
+		list-style: none
+		display: flex
+		margin: 0 -25px
+
+	li
+		width: 20%
+		padding: 0 25px
+
+	img
+		margin: 0 0 10px
+		transition: all .5s ease
+		&:hover
+			transform: scale(.8)
+			//background-color: #fe7b84
+			text-decoration: none
+			color: #111
+
+	span
+		display: block
+		font-family: "Heebo-Bold", Helvetica
+
+.footer-holder
+	text-align: center
+	padding: 10px 15px
+	background: #da1d24
+	font-size: 20px
+	color: #fff
+
+	p
+		margin: 0
+		font-family: "Heebo-Bold", Helvetica
+	
+
+.slick-slider
+	direction: ltr
+	position: relative
+	display: block
+	box-sizing: border-box
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	-ms-touch-action: pan-y
+	touch-action: pan-y
+	-webkit-tap-highlight-color: transparent
+
+.slick-list
+	position: relative
+	overflow: hidden
+	display: block
+	margin: 0
+	padding: 0
+	transform: translate3d(0, 0, 0)
+	&:focus
+		outline: none
+	&.dragging
+		cursor: pointer
+		cursor: hand
+
+.slick-track
+	position: relative
+	left: 0
+	top: 0
+	display: block
+	transform: translate3d(0, 0, 0)
+
+	&:before,
+	&:after
+		content: ""
+		display: table
+
+	&:after
+		clear: both
+
+.slick-slide
+	float: left
+	height: 100%
+
+.slick-arrow
+	position: absolute
+	border: none
+	outline: none
+	top: 50%
+	width: 25px
+	height: 25px
+	border-left: 8px solid #e42a37
+	border-top: 8px solid #e42a37
+	z-index: 99999
+
+.slick-next
+	right: 0
+	transform: translateY(-50%) rotate(135deg)
+.slick-prev
+	left: 0
+	transform: translateY(-50%) rotate(-45deg)
+
+.slick-arrow.slick-hidden
+		display: none
+
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+
+
+@import "media" // Всегда в конце

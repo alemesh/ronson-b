@@ -1,0 +1,207 @@
+@import "vars"
+
+
+
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+  .visual-section
+
+    .img-hold-left
+      width: 350px
+
+      .img-maska-header
+        left: -10px
+
+    .visual-content
+      font-size: 47px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+  .visual-section
+    padding-top: 90px
+
+    .img-hold-left
+      display: none
+
+      .img-maska-header
+        left: -20px
+
+      &:after
+        content: ''
+        position: absolute
+        width: 120px
+        background: #e42a37
+        height: 100%
+        right: -50px
+        top: 0
+        transform: skew(-30deg)
+
+
+      > img
+        display: none
+
+      .logo
+        position: static
+        width: 110px
+        display: block
+        margin: 0 auto
+
+        img
+          max-width: 100%
+
+  .boxes-section
+    font-size: 16px
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  .visual-section
+    background-image: url("../img/bg-mobile-complex-2.png") !important
+    background-position-y: 0
+
+    .logo
+      top: 70px
+
+    .visual-content
+      font-size: 28px
+
+      h1
+        font-size: 43px
+
+      .btn-visual
+        font-size: 20px
+        padding: 7px
+
+    .img-hold-right
+      .img-left-header
+        visibility: hidden
+
+    .form-hold
+      padding-top: 450px
+      position: static
+      background: linear-gradient(to bottom,  rgba(0,0,0,0)  0%, rgba(0,0,0,1)  100%)
+
+      .form-row
+        width: 100%
+        margin-bottom: 15px
+
+      .form-control
+        height: 42px
+        font-size: 18px
+
+      .btn
+        height: 42px
+
+  .main-wrap
+
+    .intro-section
+      font-size: 20px
+
+  .boxes-section
+    padding: 0 50px
+    font-size: 18px
+
+    li
+      padding: 0 40px
+
+  .bottom-img
+    margin: 0 -130px
+
+  .footer-holder
+    font-size: 12px
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  .visual-section
+    .visual-content
+      font-size: 28px
+
+      h1
+        font-size: 40px
+      p
+        font-size: 23px
+      .btn-visual
+        font-size: 16px
+        padding: 7px
+    .img-hold-right
+      .img-left-header
+        visibility: hidden
+
+    .form-hold
+      padding-top: 320px
+      position: static
+      background: linear-gradient(to bottom,  rgba(0,0,0,0)  0%, rgba(0,0,0,1)  100%)
+      h3
+        font-size: 17px
+
+      .form-row
+        width: 100%
+        margin-bottom: 15px
+
+      .form-control
+        height: 42px
+        font-size: 18px
+
+      .btn
+        height: 42px
+
+  .main-wrap
+
+    .intro-section
+      .regular-font
+        font-size: 15px
+      .medium-font
+        font-size: 15px
+
+  .boxes-section
+    padding: 0 50px
+    font-size: 18px
+
+    li
+      padding: 0 40px
+
+  .bottom-img
+    margin: 0 -130px
+
+  .footer-holder
+    font-size: 12px
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	.visual-section
+      .logo
+        right: -5px
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
