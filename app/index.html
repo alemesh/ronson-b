@@ -49,16 +49,19 @@
 		</div>
 		<div class="form-hold">
 			<h3>לפגישה וקבלת פרטים אודות דירות להשקעה בטוחה בפולין, השאירו פרטים</h3>
-			<form action="#" class="form">
+			<form action="form_processing.php" class="form form-validation" method="post">
+				<div class="success-msg">
+					<p>תודה!  פרטיך התקבלו בהצלחה.</p>
+				</div>
 				<div class="form-row-wrap">
 					<div class="form-row">
-						<input class="form-control" type="email" required placeholder="דוא”ל">
+						<input name="name" class="form-control" data-required="true" type="text"  placeholder="שם מלא*">
 					</div>
 					<div class="form-row">
-						<input class="form-control" required type="tel" placeholder="טלפון" pattern="(\+?\d[- .]*){7,13}" title="International, state or local telephone number">
+						<input name="tel" class="form-control" data-required="true" type="text" placeholder="טלפון*" data-regexp="(\+?\d[- .]*){7,13}" title="International, state or local telephone number">
 					</div>
 					<div class="form-row">
-						<input class="form-control" type="text" required placeholder="שם מלא">
+						<input name="email" class="form-control" type="email" placeholder="דוא”ל">
 					</div>
 					<div class="form-row">
 						<input type="submit" class="btn" value="שלח >">
@@ -70,14 +73,14 @@
 	<main>
 		<div class="main-wrap" >
 			<div class="intro-section">
-				<p class="regular-font">רונסון היא חברה פולנית בעלת ניסיון של קרוב ל-20 שנה בזירת הנדל"ן המקומית<br>באמצעות משרד השיווק והמכירות שלנו בישראל, תוכלו למצוא דירות בורשה במחיר התחלתי של 300 אלף ₪, <br>עם תשואה של כ-5% בשנה, שגם משביחות את ערכן באופן קבוע ועקבי. </p>
+				<p class="regular-font">רונסון היא חברה פולנית בעלת ניסיון של קרוב ל-20 שנה בזירת הנדל"ן המקומית.<br>באמצעות משרד השיווק והמכירות שלנו בישראל, תוכלו למצוא דירות בורשה במחיר התחלתי של 300 אלף ₪, <br>עם תשואה של כ-5% בשנה, שגם משביחות את ערכן באופן קבוע ועקבי. </p>
 				<p class="medium-font">	כחברה ציבורית, רונסון נסחרת בבורסה בפולין, לפי שווי שוק של 250 מיליון זלוטי<br>	ובתשואת דיבידנד גבוהה.</p>
 			</div>
 			<div class="boxes-section">
 				<ul class="slick-slider">
 					<li><img src="img/Vector-Smart-Object.png" alt="#"><span class="img-futer-1">ניהול, שימור ואחזקת הנכס </span></li>
 					<li><img src="img/Vector-Smart-Object2.png" alt="#"><span class="img-futer-2">רישום בטאבו הפולני</span></li>
-					<li><img src="img/Vector-Smart-Object3.png" alt="#"><span class="img-futer-3">ליווי כולל של התהליך (בנקים, משרדים ממשלתיים ומשרדי</span></li>
+					<li><img src="img/Vector-Smart-Object3.png" alt="#"><span class="img-futer-3">ליווי כולל של התהליך</span></li>
 					<li><img src="img/Vector-Smart-Object4.png" alt="#"><span class="img-futer-4">איתור שוכרים בעלי פוטנציאל החזר גבוה</span></li>
 					<li><img src="img/Vector-Smart-Object5.png" alt="#"><span class="img-futer-5">ייעוץ מקיף <br>(מחירים, תשואות)</span></li>
 
