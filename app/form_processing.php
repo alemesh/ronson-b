@@ -3,9 +3,8 @@
 //edit here
 $senderName = 'Ronson';
 $senderEmail = $_SERVER['SERVER_NAME'];
-$targetEmail = 'alemesh@acceptic.com, lemesh37@gmail.com';
-//$targetEmail .= 'lemesh37@gmail.com, alemesh@acceptic.com';
-//$targetEmail = 'ravit@gofmans.co.il';
+$targetEmail = [];
+$targetEmail = ['ravit@gofmans.co.il', 'office@ronson.co.il', 'idan@ronson.co.il'];
 $messageSubject = 'Message from web-site - '. $_SERVER['SERVER_NAME'];
 $redirectToReferer = true;
 $redirectURL = $_SERVER['SERVER_NAME'];
@@ -29,7 +28,10 @@ $messageHeaders = "From: " . $senderName . " <" . $senderEmail . ">\r\n"
     . "Content-type: text/plain; charset=UTF-8" . "\r\n";
 
 //if (preg_match('/^[_.0-9a-z-]+@([0-9a-z][0-9a-z-]+.)+[a-z]{2,4}$/',$targetEmail,$matches))
-    mail($targetEmail, $messageSubject, $messageText, $messageHeaders);
+foreach ($targetEmail as $val){
+    mail($val, $messageSubject, $messageText, $messageHeaders);
+}
+
 
 // redirect
 //if($redirectToReferer) {
