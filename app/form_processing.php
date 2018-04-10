@@ -5,6 +5,7 @@ $senderName = 'Ronson';
 $senderEmail = $_SERVER['SERVER_NAME'];
 $targetEmail = [];
 $targetEmail = ['ravit@gofmans.co.il', 'office@ronson.co.il', 'idan@ronson.co.il'];
+//$targetEmail = ['alemesh@acceptic.com'];
 $messageSubject = 'Message from web-site - '. $_SERVER['SERVER_NAME'];
 $redirectToReferer = true;
 $redirectURL = $_SERVER['SERVER_NAME'];
@@ -32,11 +33,12 @@ foreach ($targetEmail as $val){
     mail($val, $messageSubject, $messageText, $messageHeaders);
 }
 
-
+$urlredirect = 'http://www.ronson.co.il/2/thanks-page.html?Lead=true';
+//$urlredirect = 'http://192.168.89.147/thanks-page.html?Lead=true';
 // redirect
-//if($redirectToReferer) {
-//    header("Location: ".@$_SERVER['HTTP_REFERER'].'#sent');
-//} else {
-//    header("Location: ".$redirectURL);
-//}
+if($redirectToReferer) {
+    header("Location: ".$urlredirect);
+} else {
+    header("Location: ".$redirectURL);
+}
 ?>
