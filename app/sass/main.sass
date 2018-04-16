@@ -217,7 +217,24 @@ body
 			text-decoration: none
 			color: #111
 
+	.wrap-btn
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			border: none
+			outline: 0
+			top: 50%
+			left: 37%
+			width: 11px
+			height: 11px
+			border-left: 2px solid white
+			border-top: 2px solid white
+			//z-index: 99999
+			transform: translateY(-50%) rotate(-45deg)
+			z-index: 99999
 	.btn
+		position: relative
 		background: #e42a37
 		font-family: "Heebo-Regular"
 		color: white
@@ -234,6 +251,9 @@ body
 			background-color: #c11b27
 			text-decoration: none
 			//color: #111
+	.mobile-phone-button
+		display: none
+
 .main-wrap
 	text-align: center
 	background-image:  url(../img/6.png), url(../img/Rectangle-5.png)
