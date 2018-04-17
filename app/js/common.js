@@ -1,7 +1,32 @@
 jQuery(function() {
     initSlickCarousel();
     // initFormValidation();
+    // showHideButton();
+    // setInterval(showHideButton, 60000);
 });
+
+
+//interval hide button col
+if ($(window).width() < 769) {
+    function showHideButton() {
+        var timeNow = new Date();
+        var hours = timeNow.getHours();
+        console.log(hours, hours > 9 || hours < 19, $('#button'));
+        if (hours >= 9 & hours < 19) {
+            $('#button').show();
+        }else{
+            $('#button').hide();
+        }
+    }
+
+} else {
+    function showHideButton() {
+        $('#button').hide();
+    }
+}
+//finish interval hide button col
+
+
 
 // function initFormValidation() {
 //     jQuery('.form-validation').formValidation({
