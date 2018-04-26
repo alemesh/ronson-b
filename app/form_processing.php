@@ -15,6 +15,8 @@ $redirectURL = $_SERVER['SERVER_NAME'];
 $ufname = $_POST['name'];
 $uphone = $_POST['tel'];
 $umail = $_POST['email'];
+$ProjectID = $_POST['ProjectID'];
+$Password = $_POST['Password'];
 
 // prepare message text
 $messageText =	'First Name: '.$ufname."\n".
@@ -32,6 +34,33 @@ $messageHeaders = "From: " . $senderName . " <" . $senderEmail . ">\r\n"
 foreach ($targetEmail as $val){
     mail($val, $messageSubject, $messageText, $messageHeaders);
 }
+
+
+// BmbYY sistem ======
+
+$url = 'http://www.bmby.com/shared/AddClient/index.php';
+//$url = 'http://192.168.89.147/test.php';
+//$url = 'http://testbmby/test.php';
+$params = array(
+    'Fname' => $ufname, // в http://localhost/post.php это будет $_POST['param1'] == '123'
+    'Phone' => $uphone, // в http://localhost/post.php это будет $_POST['param2'] == 'abc'
+    'Email' => $umail, // в http://localhost/post.php это будет $_POST['param2'] == 'abc'
+    'ProjectID' => $ProjectID, // в http://localhost/post.php это будет $_POST['param2'] == 'abc'
+    'Password' => $Password // в http://localhost/post.php это будет $_POST['param2'] == 'abc'
+);
+$result = file_get_contents($url, false, stream_context_create(array(
+    'http' => array(
+        'method'  => 'POST',
+        'header'  => 'Content-type: application/x-www-form-urlencoded',
+        'content' => http_build_query($params)
+    )
+)));
+
+
+
+
+
+
 
 $urlredirect = 'http://www.ronson.co.il/2/thanks-page.html?Lead=true';
 //$urlredirect = 'http://192.168.89.147/thanks-page.html?Lead=true';
