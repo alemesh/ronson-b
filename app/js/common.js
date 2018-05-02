@@ -6,6 +6,46 @@ jQuery(function() {
 });
 
 
+
+//=======fixt duble click submit============
+
+$( document ).ready(function() {
+    $("#ajax_form").submit(
+        function(){
+            sendAjaxForm('result_form', 'ajax_form', 'form_processing.php');
+            return false;
+        }
+    );
+});
+function sendAjaxForm(result_form, ajax_form, url) {
+    $('#img').show();
+    $('.btn').hide();
+    $.ajax({
+        url:     url,
+        type:     "POST",
+        dataType: "html",
+        data: $("#"+ajax_form).serialize(),
+
+        success: function(response) {
+            result = $.parseJSON(response);
+            url = "http://www.ronson.co.il/2/thanks-page.html?Lead=true";
+            $(location).attr("href", url);
+
+            $('#img').hide();
+
+        },
+        error: function(response) {
+            url = "http://www.ronson.co.il/2/thanks-page.html?Lead=false";
+            $(location).attr("href", url);
+        }
+
+    });
+    url = "http://www.ronson.co.il/2/thanks-page.html?Lead=true";
+    $(location).attr("href", url);
+}
+//======= finish fixt duble click submit============
+
+
 //interval hide button col
 if ($(window).width() < 769) {
     function showHideButton() {
